@@ -1,6 +1,6 @@
 # data-input-app
 
-> 数据录入系统 
+> 数据录入系统
 
 ## Build Setup
 
