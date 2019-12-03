@@ -45,7 +45,7 @@
                 { required: true, message: '数量不能为空'},
                 { type: 'number', message: '必须为数字值'}
               ]">
-              <el-input auto-complete="off" v-model.number="formData.increase"></el-input>
+              <el-input auto-complete="off" v-model.number="formData.increase" placeholder="（人次）"></el-input>
             </el-form-item>
             <el-form-item
               label="社会工作人才纳入本省（区市）人才培养整体规划情况:"
@@ -54,7 +54,7 @@
               :rules="[
                 { required: true, message: '不能为空'},
               ]">
-              <el-input type="textarea" :rows="4" v-model="formData.zheng_ti_gui_hua"></el-input>
+              <el-input type="textarea" :rows="4" v-model="formData.zheng_ti_gui_hua" placeholder="限2000字以内" maxlength="2000" show-word-limit></el-input>
             </el-form-item>
           </el-form>
           <div slot="footer" class="dialog-footer">

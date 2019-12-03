@@ -27,7 +27,7 @@
             </el-form-item>
             <el-form-item label="类别:" >
               <el-select placeholder="请选择类别" v-model="formData.jigou_type">
-                <el-option v-for="type in types" :label="type" :value="type"></el-option>
+                <el-option v-for="type in types" :key="type" :label="type" :value="type"></el-option>
               </el-select>
             </el-form-item>
             <el-form-item v-if="formData.jigou_type=='其他（请注明）'"

@@ -25,11 +25,11 @@
           </el-menu-item> -->
           <el-menu-item index="/mingzhenggangweikaifa">
             <i class="el-icon-setting"></i>
-            <span slot="title">岗位开发</span>
+            <span slot="title">民政岗位</span>
           </el-menu-item>
           <el-menu-item index="/gangwei">
             <i class="el-icon-setting"></i>
-            <span slot="title">社工岗位</span>
+            <span slot="title">其他岗位</span>
           </el-menu-item>
           <el-menu-item index="/rencaiziyuan">
             <i class="el-icon-setting"></i>
