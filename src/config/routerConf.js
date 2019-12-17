@@ -1,3 +1,23 @@
+import Third from '../views/routers/third.vue'
+import Zhengcechuangzhi from '../views/routers/zhengcechuangzhi.vue'
+// import Xingzhengjigou from '../views/routers/xingzhengjigou.vue'
+import T2mingzhenggangweikaifa from '../views/routers/t2_minzheng_gangweikaifa.vue'
+import Gangwei from '../views/routers/gangwei.vue'
+import Rencaiziyuan from '../views/routers/rencaiziyuan.vue'
+import Rencaipeixun from '../views/routers/rencaipeixun.vue'
+import Hangyexiehui from '../views/routers/hangyexiehui.vue'
+import Minbanjigou from '../views/routers/minbanjigou.vue'
+import Zijintouru from '../views/routers/zijintouru.vue'
+import Shehuishidian from '../views/routers/shehuishidian.vue'
+import Zyfwzhengce from '../views/routers/zyfwzhengce.vue'
+import Zyfwzuzhi from '../views/routers/zyfwzuzhi.vue'
+import Zyzzhuce from '../views/routers/zyzzhuce.vue'
+import Zyzpeixun from '../views/routers/zyzpeixun.vue'
+import Jilugongzuo from '../views/routers/jilugongzuo.vue'
+import Huodongkaizhan from '../views/routers/huodongkaizhan.vue'
+import Jilibaozhang from '../views/routers/jilibaozhang.vue'
+import Zyfwzijin from '../views/routers/zyfwzijin.vue'
+
 const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' }
 const Second = { template: '<div><h2>我是第 2 个子页面</h2></div>' }
 
@@ -12,79 +32,79 @@ const Router = [
     },
     {
       path: '/third',
-      component: () => import('$views/routers/third')
+      component: Third
     },
     {
       path: '/zhengcechuangzhi',
-      component: () => import('$views/routers/zhengcechuangzhi.vue')
+      component: Zhengcechuangzhi
     },
     // {
     //   path: '/xingzhengjigou',
-    //   component: () => import('$views/routers/xingzhengjigou.vue')
+    //   component: Xingzhengjigou
     // },
     {
       path: '/mingzhenggangweikaifa',
-      component: () => import('$views/routers/t2_minzheng_gangweikaifa.vue')
+      component: T2mingzhenggangweikaifa
     },
     {
       path: '/gangwei',
-      component: () => import('$views/routers/gangwei.vue')
+      component: Gangwei
     },
     {
       path: '/rencaiziyuan',
-      component: () => import('$views/routers/rencaiziyuan.vue')
+      component: Rencaiziyuan
     },
     {
       path: '/rencaipeixun',
-      component: () => import('$views/routers/rencaipeixun.vue')
+      component: Rencaipeixun
     },
     {
       path: '/hangyexiehui',
-      component: () => import('$views/routers/hangyexiehui.vue')
+      component: Hangyexiehui
     },
     {
       path: '/minbanjigou',
-      component: () => import('$views/routers/minbanjigou.vue')
+      component: Minbanjigou
     },
     {
       path: '/zijintouru',
-      component: () => import('$views/routers/zijintouru.vue')
+      component: Zijintouru
     },
     {
       path: '/shehuishidian',
-      component: () => import('$views/routers/shehuishidian.vue')
+      component: Shehuishidian
     },
     {
       path: '/zyfwzhengce',
-      component: () => import('$views/routers/shehuishidian.vue')
+      component: Zyfwzhengce
     },
     {
       path: '/zyfwzuzhi',
-      component: () => import('$views/routers/zyfwzuzhi.vue')
+      component: Zyfwzuzhi
     },
     {
       path: '/zyzzhuce',
-      component: () => import('$views/routers/zyzzhuce.vue')
+      component: Zyzzhuce
     },
     {
       path: '/zyzpeixun',
-      component: () => import('$views/routers/zyzpeixun.vue')
+      component: Zyzpeixun
     },
     {
       path: '/jilugongzuo',
-      component: () => import('$views/routers/jilugongzuo.vue')
+      component: Jilugongzuo
     },
     {
       path: '/huodongkaizhan',
-      component: () => import('$views/routers/huodongkaizhan.vue')
+      component: Huodongkaizhan
     },
     {
       path: '/jilibaozhang',
-      component: () => import('$views/routers/jilibaozhang.vue')
+      component: Jilibaozhang
     },
     {
       path: '/zyfwzijin',
-      component: () => import('$views/routers/zyfwzijin.vue')
+      component: Zyfwzijin
     },
     {
       path: '/',
