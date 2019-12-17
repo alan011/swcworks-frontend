@@ -198,6 +198,20 @@
             </template>
           </el-table-column>
         </el-table>
+        <easy-pagination :data="fileLists">
+          <template scope="props">
+            <el-card class="box-card" style="width: 80%; text-align: left; margin:20px 0 0 20px; font-size: 16px">
+              <div slot="header" class="clearfix">
+                当前用户已上传的照片列表：
+              </div>
+                <ol>
+                  <li v-for="file in props.data">
+                    {{file}}
+                  </li>
+                </ol>
+            </el-card>
+          </template>
+        </easy-pagination>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -216,6 +230,7 @@ export default {
     return {
       tableData: [],
       c,
+      fileLists: [],
       formData: {
         id: null,
         province: "",
@@ -266,6 +281,10 @@ export default {
           let data = result.data;
         console.log(data);
         this.tableData = data.data;
+        if(data.fileList) {
+          // debugger
+          this.fileLists = data.fileList;
+        }
       }, err => {
         this.$alert(err.message);
       });
