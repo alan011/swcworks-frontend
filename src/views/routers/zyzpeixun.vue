@@ -69,6 +69,20 @@
                 ]">
                 <el-input auto-complete="off" v-model.number="formData.peixunNum"></el-input>
               </el-form-item>
+              <el-form-item label="上传照片:">
+                <el-upload
+                  action="/file_upload"
+                  :data="{'menu': 'table13'}"
+                  :on-remove="handleRemove"
+                  accept=".jpg"
+                  :on-success="uploadSuccess"
+                  :limit="1"
+                  :on-exceed="handleExceed"
+                  :file-list="formData.fileList">
+                  <el-button size="small" type="primary">点击上传</el-button>
+                  <div slot="tip" class="el-upload__tip">只能上传jpg照片</div>
+                </el-upload>
+              </el-form-item>
             </template>
             <template v-else>
               <el-form-item
@@ -226,6 +240,16 @@ export default {
     this.getData();
   },
   methods: {
+    handleExceed(file, fileList) {
+      this.$message.warning('一次只能上传一张照片!');
+      console.log(file, fileList);
+    },
+    handleRemove(file, fileList) {
+      console.log(file, fileList);
+    },
+    uploadSuccess(file, fileList) {
+      console.log(file, fileList)
+    },
     getData () {
       let params = {};
       let config = {

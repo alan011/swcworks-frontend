@@ -28,7 +28,6 @@
             </el-form-item>
             <el-form-item
               label="志愿服务总时数:"
-              
               prop="totalHours"
               :rules="[
                 { required: true, message: '数量不能为空'},
@@ -38,7 +37,6 @@
             </el-form-item>
             <el-form-item
               label="年志愿服务时数:"
-              
               prop="oneYearHours"
               :rules="[
                 { required: true, message: '数量不能为空'},
@@ -59,6 +57,20 @@
                 type="textarea"
                 :rows="4"
                 placeholder="请输入省级重点志愿服务活动名称及简介，多个活动通过分号分割并换行，最多不超过1000字"></el-input>
+            </el-form-item>
+            <el-form-item label="上传照片:">
+              <el-upload
+                action="/file_upload"
+                :data="{'menu': 'table14'}"
+                :on-remove="handleRemove"
+                accept=".jpg"
+                :on-success="uploadSuccess"
+                :limit="1"
+                :on-exceed="handleExceed"
+                :file-list="formData.fileList">
+                <el-button size="small" type="primary">点击上传</el-button>
+                <div slot="tip" class="el-upload__tip">只能上传jpg照片</div>
+              </el-upload>
             </el-form-item>
           </el-form>
           <div slot="footer" class="dialog-footer">
@@ -147,6 +159,16 @@ export default {
     this.getData();
   },
   methods: {
+    handleExceed(file, fileList) {
+      this.$message.warning('一次只能上传一张照片!');
+      console.log(file, fileList);
+    },
+    handleRemove(file, fileList) {
+      console.log(file, fileList);
+    },
+    uploadSuccess(file, fileList) {
+      console.log(file, fileList)
+    },
     getData () {
       let params = {};
       let config = {
