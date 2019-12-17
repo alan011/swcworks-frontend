@@ -77,7 +77,7 @@
             <el-form-item label="上传文件:">
               <el-upload
                 action="/file_upload"
-                :data="{'menu': 'table14'}"
+                :data="{'menu': 'table15'}"
                 :on-remove="handleRemove"
                 accept=".doc, .docx, .pdf"
                 :on-success="uploadSuccess"
